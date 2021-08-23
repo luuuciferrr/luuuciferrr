@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>양미나의 포트폴리오</title>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/jquery.mousewheel.min.js"></script>
+    <script src="js/circle-progress.js"></script>
+    <script src="js/circletype.min.js"></script>
+    <script src="js/layout.js"></script>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="shorcut icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        /*top*/
+        a {text-decoration: none; color: #202121;}
+        #top {width: 100%; height: 80px; background-color: #F6F7F6; position: fixed; line-height: 80px; z-index: 100; border-bottom: 1px solid #e2e2e2;}
+
+        #top > h1 {float: left; font-size: 25px; font-weight: bolder; margin-left: 40px;}
+
+        #main_menu > ul {width: 800px; height: 80px; float: right; font-size: 20px;}
+        #main_menu > ul > li {float: left; margin-right: 20px; transition: all 0.4s ease; width: 110px; height: 80px; text-align: center;}
+        #main_menu > ul > li:nth-child(4) {margin-right: 35px;}
+        #main_menu > ul > li:nth-child(5) {margin-right: 30px;}
+        #main_menu > ul > li:last-child {margin-right: 0;}
+
+        #main_menu > ul > li > a {width: 110px; height: 30px; display: inline-block; opacity: 0.5; transition: all 0.4s ease-in; -webkit-transition: all 0.4s ease-in;}
+        #main_menu > ul > li > a.on {font-weight: bolder; /*color: #000000;*/ opacity: 1;}
+        #main_menu > ul > li > a:hover {/*font-weight: bolder;*/ /*color: #000000;*/  opacity: 1;}
+
+
+        @media screen and ( max-width: 1000px ){
+            #top {border-bottom: 1px solid #e2e2e2;}
+            #top > h1 {display: none;}
+            #main_menu ul {width: 100%; height: 60px; float: right;}
+            #main_menu ul li {float: left; width: 15%; text-align: center; margin-right: 0px;}
+            #main_menu > ul > li:nth-child(3) {margin-right: 12px;}
+            #main_menu > ul > li:nth-child(4) {margin-right: 17px;}
+            #main_menu > ul > li:nth-child(5) {margin-right: 10px;}
+            #main_menu ul li a {font-size: 13px;}
+        }
+    </style>
+</head>
+<body>
+    <header id="top">
+        <h1><a href="index.html">MNY</a></h1>
+        <nav id="main_menu">
+            <ul>
+                <li><a href="#" data-n="1" class="on">HOME</a></li>
+                <li><a href="#" data-n="2">PROFILE</a></li>
+                <li><a href="#" data-n="3">SKILLS</a></li>
+                <li><a href="#" data-n="4">PORTFOLIO1</a></li>
+                <li><a href="#" data-n="5">PORTFOLIO2</a></li>
+                <li><a href="#" data-n="6">CONTACT</a></li>
+            </ul>
+        </nav><!--main_menu-->
+    </header><!--top-->
+
+    <ul id="btn">
+        <li class="btn btn1 sel" data-n="1" title="HOME">1</li>
+        <li class="btn btn2" data-n="2" title="PROFILE">2</li>
+        <li class="btn btn3" data-n="3" title="SKILLS">3</li>
+        <li class="btn btn4" data-n="4" title="PORTFOLIO1">4</li>
+        <li class="btn btn5" data-n="5" title="PORTFOLIO2">5</li>
+        <li class="btn btn6" data-n="6" title="CONTACT">6</li>
+    </ul><!--btn-->
+
+    <div id="home" data-n="1" class="contents con1">
+        <h2>Portfolio</h2>
+        <img src="images/profile.png" alt="메인사진" width="250" height="464">
+        <div class="vol_wrap">
+            <p class="medium">web design and web publishing portfolio by Mina Yang - web design and web publishing portfolio - </p>
+            <div class="vol">
+                <p>Vol.1</p>
+                <p>by <span>Mina Yang</span></p>
+            </div><!--vol-->
+        </div><!--vol_wrap-->
+        <p class="home_txt">Web Design<br>Web Publishing</p>
+    </div><!--home-->
+
+    <div id="profile" data-n="2" class="contents con2">
+        <div class="p_left">
+            <img src="images/profile2.jpeg" alt="프로필사진" width="292" height="438">
+            <p>1997.10.20 Seoul</p>
+        </div><!--p_pic-->
+        <div class="p_middle">
+            <h3 class="title1">Profile</h3>
+            <div class="pm_con1">
+                <p class="pm_title">경력/교육</p>
+                <div class="pm_date">
+                    <p>2021.08</p>
+                    <p>2019</p>
+                    <p>2017.05</p>
+                </div><!--pm_date-->
+                <div class="pm_name">
+                    <p>모바일 UI/UX 웹디자인&amp;웹퍼블리셔 과정 수료 (신촌이젠아카데미)</p>
+                    <p>서울로 7017 외국인관광안내원</p>
+                    <p>캐릭터일러스트양성과정 수료</p>
+                </div><!--pm_name-->
+            </div><!--pm_con1-->
+            <div class="pm_con2">
+                <p class="pm_title">KEYWORDS</p>
+                <p><span>#영어</span><span>#중국어</span><span>#해외유학경험</span><span>#미술</span><span>#섬세함</span><span>#꼼꼼함</span><span>#빠릿빠릿</span><span>#신중함</span></p>
+            </div><!--pm_con2-->
+        </div><!--p_middle-->
+        <div class="p_right">
+            <p>Mina Yang</p>
+            <p>양미나</p>
+            <p>梁米那</p>
+        </div><!--p_right-->
+        <div class="p_bottom">
+            <p>안 되면 될 때까지!</p>
+        </div><!--p_bottom-->
+    </div><!--profile-->
+
+    <div id="skills" data-n="3" class="contents con3"> 
+        <h3 class="title2">Skills</h3>
+        <div class="skills_wrap">
+            <div class="skill skl1">
+                <img src="images/photoshop.png" alt="포토샵" width="40" height="40">
+                <p>PHOTOSHOP</p>
+                <strong>85%</strong>
+            </div><!--skl1-->
+            <div class="skill skl2">
+                <img src="images/illust.png" alt="일러스트레이터" width="40" height="40">
+                <p>ILLUSTRATOR</p>
+                <strong>80%</strong>
+            </div><!--skl2-->
+            <div class="skill skl3">
+                <img src="images/html.png" alt="HTML" width="30" height="42">
+                <p>HTML5</p>
+                <strong>85%</strong>
+            </div><!--skl3-->
+            <div class="skill skl4">
+                <img src="images/css.png" alt="CSS" width="30" height="42">
+                <p>CSS</p>
+                <strong>80%</strong>
+            </div><!--skl4-->
+            <div class="skill skl5">
+                <img src="images/js.png" alt="JQUERY" width="30" height="42">
+                <p>JQUERY</p>
+                <strong>60%</strong>
+            </div><!--skl5-->
+        </div><!--skills_wrap-->
+    </div><!--skills-->
+
+    <div id="portfolio1" data-n="4" class="contents con4">
+        <h3 class="title3">Portfolio #1</h3>
+        <div class="ptf_con1">
+            <img src="images/portfolio1.png" alt="포트폴리오1" width="500" height="397">
+            <div class="ptf1_txt">
+                <p>국립중앙박물관</p>
+                <p>National Museum of Korea</p>
+                <div class="txt_w1">
+                    <p>#뉴모피즘</p>
+                    <p>#심플</p>
+                    <p>#입체적</p>
+                    <p>2021. 06 - 2021. 07</p>
+                    <p>PC</p>
+                </div><!--txt_w1-->
+                <a href="http://lucifer666.dothome.co.kr/">바로가기</a>
+            </div><!--ptf1_txt-->
+        </div><!--ptf_con1-->
+    </div><!--portfolio1-->
+    <div id="portfolio2" data-n="5" class="contents con5">
+        <h3 class="title4">Portfolio #2</h3>
+        <div class="ptf_con2">
+            <div class="ptf2_txt">
+                <p>삼성전자서비스</p>
+                <p>Samsung Electronics Service</p>
+                <div class="txt_w2">
+                    <p>#컬러</p>
+                    <p>#깔끔</p>
+                    <p>#일러스트</p>
+                    <p>2021. 07</p>
+                    <p>PC / Tablet / Mobile</p>
+                </div><!--txt_w2-->
+                <a href="http://correpond7.dothome.co.kr">바로가기</a>
+            </div><!--ptf2_txt-->
+            <img src="images/portfolio2.png" alt="포트폴리오2" width="520" height="370">
+        </div><!--ptf_con2-->
+    </div><!--portfolio2-->
+
+    <div id="contact" data-n="6" class="contents con6">
+        <h3 class="title5">Contact</h3>
+        <div class="contact_wrap">
+            <p class="anim-typewriter">Get in touch with me.</p>
+            <p class="anim-typewriter2">correpond7@naver.com</p>
+        </div><!--contact_wrap-->
+        <img src="images/flower.png" alt="꽃" width="400" height="400" class="flower">
+    </div><!--contact-->
+
+</body>
+</html>
